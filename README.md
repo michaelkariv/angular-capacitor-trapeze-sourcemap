@@ -21,7 +21,8 @@ _DevTools failed to load source map: Could not load content for http://localhost
    4. [https://stackoverflow.com/questions/60906953/ionic-5-capacitor-err-cleartext-not-permitted-in-android/68222928#68222928](https://stackoverflow.com/questions/60906953/ionic-5-capacitor-err-cleartext-not-permitted-in-android/68222928#68222928)
 8. So I generated a new Angular app using the latest Angular (v14) and Capacitor(v4.4), and out of the box the problem is observable.
 9. Whatever I tried failed, though the error changed to net::ERR_CONNECTION_REFUSED, for all the same files
- 
+10. I reinstalled Chrome - did not help
+11. When on the same Android device I run the same app as a Web App in a chrome browser, remote debugging works just fine.
 
 # What I tried
 There are many things to try out, per the linked pages (mostly on StackOverflow).

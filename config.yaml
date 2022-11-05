@@ -31,9 +31,9 @@ platforms:
           ext:
             minSdkVersion:
         replace:
-          minSdkVersion: "28"
-          compileSdkVersion: "32"
-          targetSdkVersion: "32"
+          minSdkVersion: "31"
+          compileSdkVersion: "31"
+          targetSdkVersion: "31"
     res:
       - path: values
         file: strings.xml

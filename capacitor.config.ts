@@ -5,11 +5,18 @@ const config: CapacitorConfig = {
   appName: 'debugtest',
   webDir: 'dist/debugtest',
   bundledWebRuntime: false,
-  loggingBehavior: 'production',
+  loggingBehavior: 'debug',
+
+//   server: {
+//     cleartext: true
+//   },
 
   server: {
+    androidScheme: 'http',
+    hostname: '127.0.0.1',
     cleartext: true
   },
+
 
 //   server: {
 //     androidScheme: 'http',
