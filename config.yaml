@@ -1,0 +1,63 @@
+vars:
+  PACKAGE_NAME:
+    default: com.tests.debugtest
+  PRODUCT_NAME:
+    default: DebugTest
+  RES_SRC_FOLDER:
+    default: ./_assets/pohudets/android/res
+  VERSION:
+    default: 9
+platforms:
+  android:
+    versionName: 0.$VERSION
+    versionCode: $VERSION
+    incrementVersionCode: false
+    manifest:
+      - file: AndroidManifest.xml
+        target: manifest/application
+        attrs:
+          "android:targetSandboxVersion": "1"
+          "tools:targetApi": "28"
+          "android:usesCleartextTraffic": true
+          "android:networkSecurityConfig": "@xml/network_security_config"
+
+      - file: AndroidManifest.xml
+        target: manifest
+        attrs:
+          'xmlns:tools': 'http://schemas:android:com/tools'
+    gradle:
+      - file: variables.gradle
+        target:
+          ext:
+            minSdkVersion:
+        replace:
+          minSdkVersion: "28"
+    res:
+      - path: values
+        file: strings.xml
+        text: |
+          <?xml version='1.0' encoding='utf-8'?>
+          <resources>
+              <string name="app_name">$PRODUCT_NAME $VERSION</string>
+              <string name="title_activity_main">$PRODUCT_NAME $VERSION</string>
+              <string name="package_name">$PACKAGE_NAME</string>
+              <string name="custom_url_scheme">$PACKAGE_NAME</string>
+          </resources>
+
+      - path: xml
+        file: network_security_config.xml
+        text: |
+          <?xml version="1.0" encoding="utf-8"?>
+          <network-security-config>
+            <base-config cleartextTrafficPermitted="true">
+              <trust-anchors>
+                <certificates src="system" />
+              </trust-anchors>
+            </base-config>
+            <domain-config cleartextTrafficPermitted="true">
+              <domain includeSubdomains="true">localhost</domain>
+              <domain includeSubdomains="true">10.0.2.2</domain>
+              <domain includeSubdomains="true">10.0.3.2</domain>
+              <domain includeSubdomains="true">127.0.0.1</domain>
+            </domain-config>
+          </network-security-config>
