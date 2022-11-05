@@ -29,3 +29,37 @@ I tried the suggestsions one by one, all in vain.
 I aggregated all the suggestions in the `config.yaml` Trapeze configuration file, which creates all the changes in Android manifest, gradle build script, networking persmissions file.
 It all comes to one file, thanks to the genius Trapeze tool, which, if you use Capacitor, is (IMHO) a must have.
 There is one exception - which is capacitor server - and it is in the `capacitor.config.ts` file. 
+
+# Build and Testing Environment
+- Gradle
+  - minSdkVersion = 28
+  - compileSdkVersion = 32
+  - targetSdkVersion = 32
+  - androidxActivityVersion = '1.4.0'
+  - androidxAppCompatVersion = '1.4.2'
+  - androidxCoordinatorLayoutVersion = '1.2.0'
+  - androidxCoreVersion = '1.8.0'
+  - androidxFragmentVersion = '1.4.1'
+  - coreSplashScreenVersion = '1.0.0-rc01'
+  - androidxWebkitVersion = '1.4.0'
+  - junitVersion = '4.13.2'
+  - androidxJunitVersion = '1.1.3'
+  - androidxEspressoCoreVersion = '3.4.0'
+   - cordovaAndroidVersion = '10.1.1'
+- Device
+  - Samsung Galaxy s20
+  - OS: Android 12
+- Packages
+  - "@angular/*": "^14.2.6",
+  - "@capacitor/android": "^4.4.0",
+  - "@capacitor/core": "^4.4.0",
+  - "@trapezedev/configure": "^5.0.7",
+- Remote Debugging
+  - OS: Microsoft Windows 10 Pro
+  - OS Version	10.0.19044 Build 19044
+  - Processor	AMD Ryzen 9 5900X 12-Core Processor, 3701 Mhz, 12 Core(s), 24 Logical Processor(s)
+  - Installed Physical Memory (RAM)	64.0 GB
+  - Chrome: Version 107.0.5304.88 (Official Build) (64-bit)
+
+
+
